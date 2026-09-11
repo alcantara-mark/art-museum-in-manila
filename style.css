@@ -20,41 +20,38 @@ body {
   padding: 0;
 }
 
-header {
+.site-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--card-bg);
   border-bottom: 2px solid var(--border-color);
-  padding: 1.5rem;
+
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 
-header h1 {
+.site-header h1 {
   color: var(--brand);
-  margin: 0 0 0.5rem 0;
-}
-
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: var(--muted-grey);
-  border-top: 1px solid var(--border-color);
-  margin-top: 3rem;
+  margin: 0 0 1rem 0;
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0 0;
+  margin: 0;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 0.75rem;
+  margin: 0;
 }
 
 nav a {
@@ -67,13 +64,67 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.hero-banner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.hero-banner h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--brand);
+}
+
+.hero-banner p {
+  margin: 0 0 1rem 0;
+  color: var(--muted-grey);
+}
+
+
+/* HERO IMAGE */
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.products-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.products-section > h2 {
+  color: var(--brand);
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
 .place-card {
+  width: 100%;
+  max-width: 800px;
   background-color: var(--card-bg);
   border-radius: 8px;
-  padding: 1.25rem; /* At least 16px (20px) */
+  padding: 1.5rem;
   border-left: 6px solid var(--brand);
-  margin-bottom: 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .place-card h3 {
@@ -82,76 +133,70 @@ nav a:hover {
   margin-top: 0;
 }
 
-.place-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+.place-card p {
+  color: var(--dark-ink);
 }
+
+.place-card img {
+  display: block;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.place-card a {
+  color: var(--brand);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.place-card a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted-grey);
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   background-color: var(--card-bg);
+  color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-th, td {
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
+th,
+td {
+  padding: 0.75rem 1rem;
   text-align: left;
+  border: 1px solid var(--brand);
 }
 
 th {
-  background-color: var(--border-color);
-  color: var(--dark-ink);
-}
-
-fieldset {
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
-  background-color: var(--card-bg);
-}
-
-legend {
-  font-weight: bold;
+  background-color: var(--light-bg);
   color: var(--brand);
-  padding: 0 0.5rem;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid var(--muted-grey);
-  border-radius: 4px;
-  font-size: 1rem;
-  margin-top: 0.25rem;
-}
-
-button[type="submit"] {
-  background-color: var(--brand);
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
   font-weight: bold;
 }
 
-button[type="submit"]:hover {
-  opacity: 0.9;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: 3px solid var(--brand);
-  outline-offset: 2px;
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
 }
