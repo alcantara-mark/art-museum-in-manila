@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -9,101 +8,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body><body style="background-color: #bedaff; font-family: Arial, sans-serif; color: #333;">
+<body>
 
+    <div class="page">
 
-<header>
-    <h1 style="text-align: center;">It's your guide Mark</h1>
-    <p style="text-align: center;">Express Yourself. Experience Manila's Art.</p>
+        <header class="site-header">
+            <h1>It's your guide Mark</h1>
+            <p>Express Yourself. Experience Manila's Art.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav>
-        <ul style="list-style-type: none; display: flex; justify-content: center; gap: 20px; padding: 0;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <aside>
+            <h3>Contact Info</h3>
+            <p><strong>Email:</strong> artmuseummanila@gmail.com</p>
+            <p><strong>Instagram:</strong> @mrkldrn._</p>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#info">Reach Out</a></li>
+                <li><a href="#message-form">Send Message</a></li>
+            </ul>
+        </aside>
 
-<main>
+        <main>
 
-    <section>
-        <h2 style="text-align: center;">Get in Touch</h2>
+            <section id="info" class="hero-banner">
+                <h2>Get in Touch</h2>
 
-        <p style="text-align: center;">
-           Have a suggestion for an IG-worthy spot or want to share a gallery location with our community? Reach out to us:
-        </p>
+                <p>
+                    Have a suggestion for an IG-worthy spot or want to share a gallery location with our community? Reach out to us:
+                </p>
 
-        <p style="text-align: center;">
-            📧 Email: artmuseummanila@gmail.com
-        </p>
+                <p>📧 <strong>Email:</strong> artmuseummanila@gmail.com</p>
+                <p>📱 <strong>Instagram:</strong> @mrkldrn._</p>
+                <p>📍 <strong>Location:</strong> Metro Manila, Philippines</p>
+            </section>
 
-        <p style="text-align: center;">
-            📱 Instagram: @mrkldrn._
-        </p>
+            <section class="place-card">
+                <h2>Let's Connect</h2>
+                <p>
+                    Follow our page for new exhibition drop guides, outfit inspiration, 
+                    hidden gallery photo spots, and the best IG-worthy art discoveries across Metro Manila!
+                </p>
+            </section>
 
-        <p style="text-align: center;">
-            📍 Location: Metro Manila, Philippines
-        </p>
-    </section>
+            <section id="message-form" class="place-card">
+                <h2>Send Me a Message</h2>
+            
+                <form style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <fieldset style="border: 1px solid var(--brand); border-radius: 6px; padding: 1.5rem;">
+                        <legend style="font-weight: bold; color: var(--brand);">Your details</legend>
+            
+                        <p>
+                            <label for="name"><strong>Name:</strong></label><br>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                        </p>
+            
+                        <p>
+                            <label for="email"><strong>Email:</strong></label><br>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                        </p>
+            
+                        <p>
+                            <label for="subject"><strong>Subject:</strong></label><br>
+                            <select id="subject" name="subject" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                                <option value="">Choose a subject</option>
+                                <option value="suggest-place">Suggest a place</option>
+                                <option value="correct-detail">Correct a detail</option>
+                                <option value="question">Ask a question</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </p>
+            
+                        <p>
+                            <label for="message"><strong>Message:</strong></label><br>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; box-sizing: border-box; padding: 0.5rem; margin-top: 4px;"></textarea>
+                        </p>
+                    </fieldset>
+            
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="submit" style="padding: 0.6rem 1.8rem; background-color: var(--brand); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Send message</button>
+                    </div>
+                </form>
+            </section>
 
-    <section>
-        <h2 style="text-align: center;">Let's Connect</h2>
+        </main>
 
-        <p style="text-align: center;">
-            Follow our page for new exhibition drop guides, outfit inspiration, 
-            hidden gallery photo spots, and the best IG-worthy art discoveries across Metro Manila!
-        </p>
-    </section>
-    <br>
+        <footer>
+            <p>&copy; 2026 Art Museum in Manila. All rights reserved.</p>
+        </footer>
 
-    <section>
-        <h2 style="text-align: center;">Send Me a Message</h2>
-    
-        <form>
-            <fieldset>
-                <legend>Your details</legend>
-    
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <br><br>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <br><br>
-    
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Choose a subject</option>
-                    <option value="suggest-place">Suggest a place</option>
-                    <option value="correct-detail">Correct a detail</option>
-                    <option value="question">Ask a question</option>
-                    <option value="other">Something else</option>
-                </select>
-    
-                <br><br>
-    
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" required
-                    style="width: 100%; box-sizing: border-box;"></textarea>
-    
-            </fieldset>
-    
-            <div style="text-align: center; margin-top: 15px;">
-                <button type="submit">Send message</button>
-            </div>
-        </form>
-    </section>
-
-</main>
-
-<footer>
-    <p style="text-align: center;">
-        &copy; 2026 Art Museum in Manila. All rights reserved.
-    </p>
-</footer>
+    </div>
 
 </body>
 

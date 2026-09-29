@@ -1,178 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>GSIS Museo ng Sining | IG Worthy Spots</title>
     <link rel="stylesheet" href="../style.css">
-
 </head>
 
-<body style="background-color: #a4deff;">
+<body>
 
-    <header>
+    <div class="page">
 
-        <h1 style="text-align: center;">GSIS Museo ng Sining</h1>
+        <header class="site-header">
+            <h1>GSIS Museo ng Sining</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav>
-
-            <ul style="list-style-type: none; display: flex; justify-content: center; gap: 20px; padding: 0;">
-
-                <li><a href="../index.html">Home</a></li>
-
-                <li><a href="../about.html">About</a></li>
-
-                <li><a href="../contact.html">Contact</a></li>
-
+        <aside>
+            <h3>Visitor Tips</h3>
+            <p><strong>Pro Tip:</strong> Perfect quiet location for clean photo backgrounds and minimal crowds.</p>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="../index.html">Back to Places</a></li>
+                <li><a href="#details">Place Details</a></li>
+                <li><a href="#suggest">Suggest a Place</a></li>
             </ul>
+        </aside>
 
-        </nav>
+        <main>
 
-    </header>
+            <section class="hero-banner">
+                <h2>GSIS Museo ng Sining</h2>
 
-    <main>
+                <img src="https://i0.wp.com/www.theurbanroamer.com/wp-content/uploads/2013/10/pa120077.jpg?ssl=1" alt="GSIS Museo ng Sining">
 
-        <section>
+                <p>
+                    GSIS Museo ng Sining is a cultural gem located within the GSIS Complex in Pasay City. 
+                    It houses an extensive collection of classic and contemporary Filipino art, including impressive monumental paintings and intricate sculptures.
+                </p>
 
-            <h2 style="text-align: center;">GSIS Museo ng Sining</h2>
+                <p>
+                    Perfect for art lovers, museum dates, quiet photography walks, 
+                    or finding inspiration surrounded by rich Filipino heritage and elegant gallery space.
+                </p>
+            </section>
 
-            <img src="https://i0.wp.com/www.theurbanroamer.com/wp-content/uploads/2013/10/pa120077.jpg?ssl=1"
+            <section id="details" class="place-card">
+                <h2>Place Details</h2>
 
-                 alt="GSIS Museo ng Sining"
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Best For</th>
+                            <th>Atmosphere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pasay City, Metro Manila</td>
+                            <td>Museum Dates & Art Trips</td>
+                            <td>Quiet & Cultural</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                 width="200"
+            <section class="place-card">
+                <h2>Why Visit</h2>
 
-                 height="200"
+                <ul style="list-style-type: disc; text-align: left; max-width: 450px; margin: 0 auto;">
+                    <li>Home to masterworks by renowned Filipino artists</li>
+                    <li>Spacious, well-lit galleries ideal for clean photos</li>
+                    <li>Peaceful and quiet environment away from crowded spots</li>
+                    <li>Great historical and artistic stop near the CCP Complex</li>
+                </ul>
+            </section>
 
-                 style="display: block; margin: 0 auto;">
+            <section id="suggest" class="place-card">
+                <h2>Suggest a Place</h2>
+            
+                <form style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <p>
+                        <label for="place-name"><strong>Place Name:</strong></label><br>
+                        <input type="text" id="place-name" name="place-name" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                    </p>
+            
+                    <fieldset style="border: 1px solid var(--brand); border-radius: 6px; padding: 1rem; margin: 1rem 0;">
+                        <legend style="font-weight: bold; color: var(--brand);">What type of place is it?</legend>
+            
+                        <input type="radio" id="food" name="category" value="food">
+                        <label for="food">Photo Spot</label><br>
+            
+                        <input type="radio" id="study" name="category" value="study">
+                        <label for="study">Study Spot</label><br>
+            
+                        <input type="radio" id="outdoors" name="category" value="outdoors">
+                        <label for="outdoors">Indoor Activity</label>
+                    </fieldset>
+            
+                    <p><strong>What's good about it?</strong></p>
+                    <p>
+                        <input type="checkbox" id="affordable" name="good-points" value="affordable">
+                        <label for="affordable">Affordable</label><br>
+            
+                        <input type="checkbox" id="wifi" name="good-points" value="wifi">
+                        <label for="wifi">Unique Museum Experience</label><br>
+            
+                        <input type="checkbox" id="quiet" name="good-points" value="quiet">
+                        <label for="quiet">Photo Opportunities</label>
+                    </p>
+            
+                    <p>
+                        <label for="email"><strong>Contact Email:</strong></label><br>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                    </p>
+            
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="submit" style="padding: 0.6rem 1.8rem; background-color: var(--brand); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Suggest Place</button>
+                    </div>
+                </form>
+            </section>
 
-            <br>
+        </main>
 
-            <p style="text-align: center; max-width: 600px; margin: 15px auto;">
+        <footer>
+            <p>© 2026 IG Worthy Spots. Discovering Metro Manila's best aesthetics.</p>
+        </footer>
 
-                GSIS Museo ng Sining is a cultural gem located within the GSIS Complex in Pasay City. 
-
-                It houses an extensive collection of classic and contemporary Filipino art, including impressive monumental paintings and intricate sculptures.
-
-            </p>
-
-            <p style="text-align: center; max-width: 600px; margin: 15px auto;">
-
-                Perfect for art lovers, museum dates, quiet photography walks, 
-
-                or finding inspiration surrounded by rich Filipino heritage and elegant gallery space.
-
-            </p>
-
-        </section>
-
-        <section>
-
-            <h2 style="text-align: center;">Place Details</h2>
-
-            <table border="1" style="margin: 0 auto;">
-
-                <tr>
-
-                    <th>Location</th>
-
-                    <th>Best For</th>
-
-                    <th>Atmosphere</th>
-
-                </tr>
-
-                <tr>
-
-                    <td>Pasay City, Metro Manila</td>
-
-                    <td>Museum Dates & Art Trips</td>
-
-                    <td>Quiet & Cultural</td>
-
-                </tr>
-
-            </table>
-
-        </section>
-
-        <section>
-
-            <h2 style="text-align: center;">Why Visit</h2>
-
-            <ul style="list-style-type: none; text-align: center; padding: 0;">
-
-                <li>Home to masterworks by renowned Filipino artists</li>
-
-                <li>Spacious, well-lit galleries ideal for clean photos</li>
-
-                <li>Peaceful and quiet environment away from crowded spots</li>
-
-                <li>Great historical and artistic stop near the CCP Complex</li>
-
-            </ul>
-
-        </section>
-        <section>
-            <h2 style="text-align: center;">Suggest a Place</h2>
-        
-            <form style="text-align: center;">
-        
-                <label for="place-name">Place Name:</label>
-                <input type="text" id="place-name" name="place-name" required>
-        
-                <br><br>
-        
-                <fieldset>
-                    <legend>What type of place is it?</legend>
-        
-                    <input type="radio" id="food" name="category" value="food">
-                    <label for="food">Photo Spot</label>
-        
-                    <input type="radio" id="study" name="category" value="study">
-                    <label for="study">Study Spot</label>
-        
-                    <input type="radio" id="outdoors" name="category" value="outdoors">
-                    <label for="outdoors">Indoor Activity</label>
-                </fieldset>
-        
-                <br>
-        
-                <p>What's good about it?</p>
-        
-                <input type="checkbox" id="affordable" name="good-points" value="affordable">
-                <label for="affordable">Affordable</label>
-        
-                <input type="checkbox" id="wifi" name="good-points" value="wifi">
-                <label for="wifi">Unique Museum Experience</label>
-        
-                <input type="checkbox" id="quiet" name="good-points" value="quiet">
-                <label for="quiet">Photo Opportunities</label>
-        
-                <br><br>
-        
-                <label for="email">Contact Email:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <br><br>
-        
-                <button type="submit">Suggest Place</button>
-        
-            </form>
-        </section>
-
-    </main>
-
-    <footer style="text-align: center; padding: 20px;">
-
-        <p>© 2026 IG Worthy Spots. Discovering Metro Manila's best aesthetics.</p>
-
-    </footer>
+    </div>
 
 </body>
 

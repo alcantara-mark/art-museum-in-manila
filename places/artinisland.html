@@ -1,179 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Art in Island | IG Worthy Spots</title>
     <link rel="stylesheet" href="../style.css">
-
 </head>
 
-<body style="background-color: #a4deff;">
+<body>
 
-    <header>
+    <div class="page">
 
-        <h1 style="text-align: center;">Art in Island</h1>
+        <header class="site-header">
+            <h1>Art in Island</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav>
-
-            <ul style="list-style-type: none; display: flex; justify-content: center; gap: 20px; padding: 0;">
-
-                <li><a href="../index.html">Home</a></li>
-
-                <li><a href="../about.html">About</a></li>
-
-                <li><a href="../contact.html">Contact</a></li>
-
+        <aside>
+            <h3>Visitor Tips</h3>
+            <p><strong>Pro Tip:</strong> Wear socks! Socks are required inside the 3D art zones.</p>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="../index.html">Back to Places</a></li>
+                <li><a href="#details">Place Details</a></li>
+                <li><a href="#suggest">Suggest a Place</a></li>
             </ul>
+        </aside>
 
-        </nav>
+        <main>
 
-    </header>
+            <section class="hero-banner">
+                <h2>Art in Island</h2>
 
-    <main>
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/2f/ce/6e.jpg" alt="Art in Island">
 
-        <section>
+                <p>
+                    Art in Island is a vibrant 3D art museum and media art display located in Cubao, Quezon City. 
+                    It offers interactive optical illusions and glowing digital projections that bring creative photo setups to life.
+                </p>
 
-            <h2 style="text-align: center;">Art in Island</h2>
+                <p>
+                    Perfect for photo shoots, group dates, aesthetic content creation, 
+                    or simply immersing yourself in colorful and surreal visual exhibits.
+                </p>
+            </section>
 
-                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/2f/ce/6e.jpg"
+            <section id="details" class="place-card">
+                <h2>Place Details</h2>
 
-                 alt="Art in Island"
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Best For</th>
+                            <th>Atmosphere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cubao, Quezon City</td>
+                            <td>Photo Shoots</td>
+                            <td>Interactive & Immersive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                 width="200"
+            <section class="place-card">
+                <h2>Why Visit</h2>
 
-                 height="200"
+                <ul style="list-style-type: disc; text-align: left; max-width: 450px; margin: 0 auto;">
+                    <li>Vibrant 3D wall art and immersive media projections</li>
+                    <li>Endless creative backdrops for fashion and IG photos</li>
+                    <li>Interactive exhibits designed for unique pose ideas</li>
+                    <li>Fun and memorable destination for groups and dates</li>
+                </ul>
+            </section>
 
-                 style="display: block; margin: 0 auto;">
+            <section id="suggest" class="place-card">
+                <h2>Suggest a Place</h2>
+            
+                <form style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <p>
+                        <label for="place-name"><strong>Place Name:</strong></label><br>
+                        <input type="text" id="place-name" name="place-name" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                    </p>
+            
+                    <fieldset style="border: 1px solid var(--brand); border-radius: 6px; padding: 1rem; margin: 1rem 0;">
+                        <legend style="font-weight: bold; color: var(--brand);">What type of place is it?</legend>
+            
+                        <input type="radio" id="food" name="category" value="food">
+                        <label for="food">Photo Spot</label><br>
+            
+                        <input type="radio" id="study" name="category" value="study">
+                        <label for="study">Study Spot</label><br>
+            
+                        <input type="radio" id="outdoors" name="category" value="outdoors">
+                        <label for="outdoors">Indoor Activity</label>
+                    </fieldset>
+            
+                    <p><strong>What's good about it?</strong></p>
+                    <p>
+                        <input type="checkbox" id="affordable" name="good-points" value="affordable">
+                        <label for="affordable">Affordable</label><br>
+            
+                        <input type="checkbox" id="wifi" name="good-points" value="wifi">
+                        <label for="wifi">Unique Museum Experience</label><br>
+            
+                        <input type="checkbox" id="quiet" name="good-points" value="quiet">
+                        <label for="quiet">Photo Opportunities</label>
+                    </p>
+            
+                    <p>
+                        <label for="email"><strong>Contact Email:</strong></label><br>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; box-sizing: border-box; margin-top: 4px;">
+                    </p>
+            
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="submit" style="padding: 0.6rem 1.8rem; background-color: var(--brand); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Suggest Place</button>
+                    </div>
+                </form>
+            </section>
 
-            <br>
+        </main>
 
-            <p style="text-align: center; max-width: 600px; margin: 15px auto;">
+        <footer>
+            <p>© 2026 IG Worthy Spots. Discovering Metro Manila's best aesthetics.</p>
+        </footer>
 
-                Art in Island is a vibrant 3D art museum and media art display located in Cubao, Quezon City. 
-
-                It offers interactive optical illusions and glowing digital projections that bring creative photo setups to life.
-
-            </p>
-
-            <p style="text-align: center; max-width: 600px; margin: 15px auto;">
-
-                Perfect for photo shoots, group dates, aesthetic content creation, 
-
-                or simply immersing yourself in colorful and surreal visual exhibits.
-
-            </p>
-
-        </section>
-
-        <section>
-
-            <h2 style="text-align: center;">Place Details</h2>
-
-            <table border="1" style="margin: 0 auto;">
-
-                <tr>
-
-                    <th>Location</th>
-
-                    <th>Best For</th>
-
-                    <th>Atmosphere</th>
-
-                </tr>
-
-                <tr>
-
-                    <td>Cubao, Quezon City</td>
-
-                    <td>Photo Shoots</td>
-
-                    <td>Interactive & Immersive</td>
-
-                </tr>
-
-            </table>
-
-        </section>
-
-        <section>
-
-            <h2 style="text-align: center;">Why Visit</h2>
-
-            <ul style="list-style-type: none; text-align: center; padding: 0;">
-
-                <li>Vibrant 3D wall art and immersive media projections</li>
-
-                <li>Endless creative backdrops for fashion and IG photos</li>
-
-                <li>Interactive exhibits designed for unique pose ideas</li>
-
-                <li>Fun and memorable destination for groups and dates</li>
-
-            </ul>
-
-        </section>
-        
-         <section>
-            <h2 style="text-align: center;">Suggest a Place</h2>
-        
-            <form style="text-align: center;">
-        
-                <label for="place-name">Place Name:</label>
-                <input type="text" id="place-name" name="place-name" required>
-        
-                <br><br>
-        
-                <fieldset>
-                    <legend>What type of place is it?</legend>
-        
-                    <input type="radio" id="food" name="category" value="food">
-                    <label for="food">Photo Spot</label>
-        
-                    <input type="radio" id="study" name="category" value="study">
-                    <label for="study">Study Spot</label>
-        
-                    <input type="radio" id="outdoors" name="category" value="outdoors">
-                    <label for="outdoors">Indoor Activity</label>
-                </fieldset>
-        
-                <br>
-        
-                <p>What's good about it?</p>
-        
-                <input type="checkbox" id="affordable" name="good-points" value="affordable">
-                <label for="affordable">Affordable</label>
-        
-                <input type="checkbox" id="wifi" name="good-points" value="wifi">
-                <label for="wifi">Unique Museum Experience</label>
-        
-                <input type="checkbox" id="quiet" name="good-points" value="quiet">
-                <label for="quiet">Photo Opportunities</label>
-        
-                <br><br>
-        
-                <label for="email">Contact Email:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <br><br>
-        
-                <button type="submit">Suggest Place</button>
-        
-            </form>
-        </section>
-
-    </main>
-
-    <footer style="text-align: center; padding: 20px;">
-
-        <p>© 2026 IG Worthy Spots. Discovering Metro Manila's best aesthetics.</p>
-
-    </footer>
+    </div>
 
 </body>
 

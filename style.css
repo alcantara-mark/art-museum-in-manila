@@ -7,7 +7,7 @@
   --border-color: #f0f4f8;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -20,37 +20,76 @@ body {
   padding: 0;
 }
 
+/* ==========================================
+   PAGE GRID SKELETON (MOBILE FIRST)
+   ========================================== */
+
+/* Base: Mobile — single column, stacked layout */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "masthead"
+    "side"
+    "main"
+    "foot";
+  gap: 16px;
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Desktop Enhancement: 2 Columns at 700px and above */
+@media (min-width: 700px) {
+  .page {
+    grid-template-columns: 250px minmax(0, 1fr);
+    grid-template-areas:
+      "masthead masthead"
+      "side     main"
+      "foot     foot";
+  }
+}
+
+/* Assign region elements to named grid areas */
+.site-header { grid-area: masthead; width: 100%; }
+aside        { grid-area: side; width: 100%; }
+main         { grid-area: main; width: 100%; min-width: 0; }
+footer       { grid-area: foot; width: 100%; }
+
+/* ==========================================
+   COMPONENT STYLING
+   ========================================== */
+
 .site-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: var(--card-bg);
   border-bottom: 2px solid var(--border-color);
-
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
   text-align: center;
+  border-radius: 8px;
 }
 
 .site-header h1 {
   color: var(--brand);
+  margin: 0 0 0.5rem 0;
+}
+
+.site-header p {
   margin: 0 0 1rem 0;
+  color: var(--dark-ink);
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 20px;
-
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-nav li {
   margin: 0;
 }
 
@@ -64,87 +103,75 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero-banner {
-  width: 80%;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1.5rem;
+/* Sticky Sidebar styling */
+aside {
   background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  text-align: center;
+  position: sticky;
+  top: 20px;
+  align-self: start;
 }
 
-.hero-banner h2 {
-  margin: 0 0 0.5rem 0;
-  color: var(--brand);
-}
-
-.hero-banner p {
-  margin: 0 0 1rem 0;
-  color: var(--muted-grey);
-}
-
-
-/* HERO IMAGE */
-
-.hero-banner img {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 1rem auto;
-  border-radius: 6px;
-}
-
-.products-section {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.products-section > h2 {
-  color: var(--brand);
-  margin-bottom: 2rem;
-}
-
-.product-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.place-card {
-  width: 100%;
-  max-width: 800px;
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  padding: 1.5rem;
-  border-left: 6px solid var(--brand);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
-
-.place-card h3 {
-  font-size: 1.35rem;
+aside h3 {
   color: var(--brand);
   margin-top: 0;
 }
 
-.place-card p {
-  color: var(--dark-ink);
+aside ul {
+  list-style-type: square;
+  padding-left: 20px;
 }
 
-.place-card img {
-  display: block;
+aside a {
+  color: var(--brand);
+  font-weight: bold;
+  text-decoration: none;
+}
 
+aside a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-banner, .place-card, .product-card {
   width: 100%;
-  max-width: 600px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.place-card {
+  border-left: 6px solid var(--brand);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.hero-banner h2, .place-card h3 {
+  margin-top: 0;
+  color: var(--brand);
+}
+
+.hero-banner img, .place-card img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
   height: auto;
   margin: 1rem auto;
   border-radius: 6px;
+}
+
+.places-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .place-card a {
@@ -157,21 +184,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
 footer {
   text-align: center;
   padding: 1.5rem;
-  color: var(--muted-grey);
+  color: var(--dark-ink);
+  background-color: var(--card-bg);
+  border-radius: 8px;
   border-top: 1px solid var(--border-color);
-  margin-top: 3rem;
+  width: 100%;
 }
-
 
 table {
   width: 100%;
@@ -184,8 +205,7 @@ table {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-th,
-td {
+th, td {
   padding: 0.75rem 1rem;
   text-align: left;
   border: 1px solid var(--brand);
