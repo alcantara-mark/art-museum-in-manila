@@ -4,7 +4,7 @@ let reviewCount = 3;
 
 const footerCopyrightElement = document.getElementById("copyright-text");
 if (footerCopyrightElement) {
-    footerCopyrightElement.textContent = `© ${currentYear} ${guideName}. All rights reserved.`;
+    footerCopyrightElement.textContent = `© ${currentYear} ${guideName} All rights reserved.`;
 }
 
 const ratingArtInIsland = 4.5;
@@ -27,8 +27,8 @@ const placeRatingElement = document.getElementById("place-rating-value");
 
 if (placeRatingElement) {
     const numericRating = Number(placeRatingElement.dataset.rating || 4.8);
-    let ratingLabel = "";
 
+    let ratingLabel = "";
     if (numericRating >= 4.0) {
         ratingLabel = "Highly recommended";
     } else if (numericRating >= 2.5) {
@@ -42,9 +42,8 @@ if (placeRatingElement) {
         ratingLabelElement.textContent = `Recommendation: ${ratingLabel}`;
     }
 
-    const priceLevel = 1;
+    const priceLevel = 2;
     const isOpenNow = true;
-
     const isGoodOption = (priceLevel <= 2) && (isOpenNow === true);
     const budgetStatus = isGoodOption ? "Good option right now" : "Maybe another time";
 
@@ -53,7 +52,7 @@ if (placeRatingElement) {
         budgetStatusElement.textContent = `Visit Status: ${budgetStatus}`;
     }
 
-    const isCloseBy = numericRating >= 4.0;
+    const isCloseBy = numericRating >= 4.0; 
     const distanceNote = isCloseBy ? "Accessible location" : "Plan your trip ahead";
 
     const distanceNoteElement = document.getElementById("distance-note");
