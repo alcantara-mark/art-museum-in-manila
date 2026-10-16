@@ -4,14 +4,15 @@ let reviewCount = 3;
 
 const footerCopyrightElement = document.getElementById("copyright-text");
 if (footerCopyrightElement) {
-    footerCopyrightElement.textContent = `© ${currentYear} ${guideName} All rights reserved.`;
+    footerCopyrightElement.textContent = `© ${currentYear} ${guideName}. All rights reserved.`;
 }
 
-const ratingArtInIsland = 4.5;
-const ratingNationalMuseum = 4.9;
-const ratingGsisMuseum = 4.2;
+// Museum Ratings (Art in Island, National Museum of Fine Arts, GSIS Museo ng Sining)
+const ratingArtInIsland = 4.6;
+const ratingFineArts = 4.8;
+const ratingGsis = 4.3;
 
-const totalScore = ratingArtInIsland + ratingNationalMuseum + ratingGsisMuseum;
+const totalScore = ratingArtInIsland + ratingFineArts + ratingGsis;
 const averageRating = (totalScore / reviewCount).toFixed(1);
 
 const calculatedStatsElement = document.getElementById("guide-stats");
@@ -53,7 +54,7 @@ if (placeRatingElement) {
     }
 
     const isCloseBy = numericRating >= 4.0; 
-    const distanceNote = isCloseBy ? "Accessible location" : "Plan your trip ahead";
+    const distanceNote = isCloseBy ? "Walking distance" : "Better to commute";
 
     const distanceNoteElement = document.getElementById("distance-note");
     if (distanceNoteElement) {
